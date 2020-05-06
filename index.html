@@ -1,0 +1,330 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>未见云 - 一份外卖钱上云</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+  <link rel="shortcut icon" href="img/unnocloud.png">
+  <link href="https://cdn.bootcss.com/mdui/0.4.3/css/mdui.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/fcui.min.css"/>
+  <link rel="stylesheet" href="css/unnocloud.css"/>
+  <script src="https://cdn.bootcss.com/mdui/0.4.3/js/mdui.min.js"></script>
+  <script src="https://cdn.bootcss.com/smooth-scroll/16.1.0/smooth-scroll.polyfills.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+  <script src="./js/unnocloud.js"></script>
+</head>
+<body id="body" class="mdui-loaded mdui-appbar-with-toolbar mdui-theme-primary-pink mdui-theme-accent-pink" ondragstart="return false;" >
+<!--工具栏-->
+<header class="mdui-appbar fcui-appbar-banner mdui-color-theme mdui-appbar-fixed mdui-shadow-0" id="mainappbar">
+    <div class="mdui-toolbar"> <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-drawer="{target: '#main-drawer', swipe: true,overlay:true}">
+        <i class="mdui-icon material-icons">menu</i></span><a href="../" class="mdui-typo-headline mdui-hidden-xs">未见云</a>
+        <a class="mdui-typo-title">Unnoticed Cloud</a>
+    <div class="mdui-toolbar-spacer"></div>
+      <span class="mdui-btn mdui-btn-icon mdui-btn-dense mdui-ripple mdui-ripple-white" mdui-dialog="{target: '#AboutDialog'}">
+          <i class="mdui-icon material-icons" mdui-tooltip="{content: '关于'}">insert_emoticon</i>
+      </span>
+    </div>
+</header>
+<!--面板-->
+<div class="type-unnocloud">
+  <div class="mdui-container main-container">
+      <div class="section-title container ml-auto mr-auto" id="codeunnocloud">
+          <h1 class="text-center text-white"><span class="typed-text"></span><span class="cursor"> </span></h1>
+      </div>
+  </div>
+</div>
+<div class="mdui-tab mdui-color-theme fcui-color fcui-shadow-down-2" mdui-tab>
+  <a href="#cloud">云计算服务</a>
+  <a href="#buildweb">建站服务</a>
+  <a href="#webhookrebot">其他服务</a>
+</div>
+
+<!--菜单-->
+<div class="mdui-drawer mdui-drawer-close mdui-color-white mdui-drawer-full-height" id="main-drawer">
+  <div class="fcui-listtitle">
+    未见云
+  </div>
+  <ul class="mdui-list" mdui-collapse="{accordion: true}" style="margin-bottom: 76px;">
+    <a href="/" class="mdui-list-item mdui-ripple mdui-list-item-active">
+      <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+      <div class="mdui-list-item-content">首页</div>
+    </a>
+
+    <li class="mdui-subheader">云计算服务</li>
+    <li class="mdui-collapse-item">
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons" style="color: #F6416C">cloud_queue</i>
+        <div class="mdui-list-item-content">云服务器</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        <a href="./cloud/vps/"><li class="mdui-list-item mdui-ripple">VPS 虚拟服务器</li></a>
+        <a href="./cloud/gjb/"><li class="mdui-list-item mdui-ripple">挂机宝/云电脑</li></a>
+      </ul>
+    </li>
+
+    <li class="mdui-collapse-item">
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons" style="color: #5BE498">local_laundry_service</i>
+        <div class="mdui-list-item-content">云存储</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        <a href="./cloud/oss/"><li class="mdui-list-item mdui-ripple">OSS 对象存储</li></a>
+      </ul>
+    </li>
+
+    <li class="mdui-collapse-item">
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons" style="color: #1E88E5">web</i>
+        <div class="mdui-list-item-content">应用托管</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        <a href='javascript:;' onclick='javascript:CallQQ()'><li class="mdui-list-item mdui-ripple"><script></script>Web应用托管</li></a>
+        <a href='javascript:;' onclick='javascript:CallQQ()'><li class="mdui-list-item mdui-ripple">WordPress托管</li></a>
+        <a href='javascript:;' onclick='javascript:CallQQ()'><li class="mdui-list-item mdui-ripple">HTML纯页托管</li></a>
+      </ul>
+    </li>
+    <!-- <li class="mdui-subheader">WebHook机器人</li>
+    <li class="mdui-collapse-item">
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons unnocloudicon tk-dingding" style="color: #3698DB"></i>
+        <div class="mdui-list-item-content">钉钉机器人</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        <a href="./docs/dingTalk/sendmsg/"><li class="mdui-list-item mdui-ripple">基础消息推送</li></a>
+      </ul>
+    </li> -->
+  </ul>
+</div>
+<!--对话框-->
+<div class="mdui-dialog" id="AboutDialog">
+  <div class="mdui-dialog-title">关于未见云 - Unnocloud.com</div>
+  <div class="mdui-dialog-content">
+    <div class="mdui-typo">
+      <p>未见云隶属于 <a href="https://nullcraft.org" target="_blank">灵工艺工作室</a> 由 未知云 提供硬件支持</p>
+    </div>
+  </div>
+  <div class="mdui-dialog-actions">
+    <button class="mdui-btn mdui-ripple" mdui-dialog-confirm>了解咯</button>
+  </div>
+</div>
+<!--悬浮按钮-->
+<div class="mdui-fab-wrapper" mdui-fab="{trigger: 'hover'}">
+  <button class="mdui-fab mdui-ripple mdui-color-theme-accent"> <i class="mdui-icon material-icons">add</i> <i class="mdui-icon mdui-fab-opened material-icons">add</i> </button>
+  <div class="mdui-fab-dial">
+    <a class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-indigo" mdui-tooltip="{content: '到顶端'}" href="#"><i class="mdui-icon material-icons">keyboard_arrow_up</i></a> </div>
+</div>
+<!--正文-->
+<div id="cloud">
+  <div class="fcui-container" style="margin-top: 20px;">
+      <div class="fcui-spantitle" style="border-left: 4px solid #F6416C;">
+          <span  class="fcui-spantitle-left">云服务器</span><span class="infospan-unnocloud">Cloud Server</span>
+      </div>
+  </div>
+  <div class="fcui-container">
+      <div class="mdui-col-md-3 mdui-col-sm-6 mdui-col-xs-12 fc-card-bottom-18">
+        <div class="mdui-card">
+          <div class="fcui-card-header">
+            <img class="fcui-card-header-avatar" src="./img/logo/server.svg" alt="未见云VPS虚拟服务器" style="background: #495164">
+            <div class="fcui-card-header-title">低价VPS虚拟服务器</div>
+            <div class="fcui-card-header-subtitle">Virtual Private Server</div>
+            <div class="mdui-card-menu" style="margin-top:2px;">
+              <a class="mdui-btn mdui-btn-icon" href="./cloud/vps/"><i class="mdui-icon material-icons">open_in_new</i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mdui-col-md-3 mdui-col-sm-6 mdui-col-xs-12 fc-card-bottom-18">
+        <div class="mdui-card">
+          <div class="fcui-card-header">
+            <img class="fcui-card-header-avatar" src="./img/logo/guajibao.svg" alt="未见云面板服务器" style="background: #ed6663">
+            <div class="fcui-card-header-title">挂机宝/云电脑</div>
+            <div class="fcui-card-header-subtitle">Private Computer</div>
+            <div class="mdui-card-menu" style="margin-top:2px;">
+              <a class="mdui-btn mdui-btn-icon" href="./cloud/gjb/"><i class="mdui-icon material-icons">open_in_new</i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+  <div class="fcui-container" style="margin-top: 20px;">
+      <div class="fcui-spantitle" style="border-left: 4px solid #5BE498;">
+          <span  class="fcui-spantitle-left">云存储</span><span class="infospan-unnocloud">Cloud Storage</span>
+      </div>
+  </div>
+  <div class="fcui-container">
+      <div class="mdui-col-md-3 mdui-col-sm-6 mdui-col-xs-12 fc-card-bottom-18">
+        <div class="mdui-card">
+          <div class="fcui-card-header">
+            <img class="fcui-card-header-avatar" src="./img/logo/oss.svg" alt="未见云对象存储" style="background: #B095FE">
+            <div class="fcui-card-header-title">OSS 对象存储</div>
+            <div class="fcui-card-header-subtitle">Object Storage Service</div>
+            <div class="mdui-card-menu" style="margin-top:2px;">
+              <a class="mdui-btn mdui-btn-icon" href="./cloud/oss/"><i class="mdui-icon material-icons">open_in_new</i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+  <div class="fcui-container" style="margin-top: 20px;">
+    <div class="fcui-spantitle" style="border-left: 4px solid #3698DB;">
+        <span  class="fcui-spantitle-left">应用托管</span><span class="infospan-unnocloud">Application Hosting</span>
+    </div>
+  </div>
+  <div class="fcui-container">
+      <div class="mdui-col-md-3 mdui-col-sm-6 mdui-col-xs-12 fc-card-bottom-18">
+        <div class="mdui-card">
+          <div class="fcui-card-header">
+            <img class="fcui-card-header-avatar" src="./img/logo/web.svg" alt="未见云Web应用托管" style="background: #1DBA9E">
+            <div class="fcui-card-header-title">Web应用托管</div>
+            <div class="fcui-card-header-subtitle">Web Application Hosting</div>
+            <div class="mdui-card-menu" style="margin-top:2px;">
+              <a class="mdui-btn mdui-btn-icon" href='javascript:;' onclick='javascript:CallQQ()'><i class="mdui-icon material-icons">open_in_new</i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mdui-col-md-3 mdui-col-sm-6 mdui-col-xs-12 fc-card-bottom-18">
+        <div class="mdui-card">
+          <div class="fcui-card-header">
+            <img class="fcui-card-header-avatar" src="./img/logo/wordpress.svg" alt="未见云WordPress托管" style="background: #2B7FB9">
+            <div class="fcui-card-header-title">WordPress托管</div>
+            <div class="fcui-card-header-subtitle">WordPress Hosting</div>
+            <div class="mdui-card-menu" style="margin-top:2px;">
+              <a class="mdui-btn mdui-btn-icon" href='javascript:;' onclick='javascript:CallQQ()'><i class="mdui-icon material-icons">open_in_new</i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mdui-col-md-3 mdui-col-sm-6 mdui-col-xs-12 fc-card-bottom-18">
+        <div class="mdui-card">
+          <div class="fcui-card-header">
+            <img class="fcui-card-header-avatar" src="./img/logo/html.svg" alt="未见云HTML纯页托管" style="background: #E77D24">
+            <div class="fcui-card-header-title">HTML纯页托管</div>
+            <div class="fcui-card-header-subtitle">HTML Pages Hosting</div>
+            <div class="mdui-card-menu" style="margin-top:2px;">
+              <a class="mdui-btn mdui-btn-icon" href='javascript:;' onclick='javascript:CallQQ()'><i class="mdui-icon material-icons">open_in_new</i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </div>
+</div>
+
+<div id="buildweb">
+    <div class="fcui-container" style="margin-top: 20px;">
+        <div class="fcui-spantitle" style="border-left: 4px solid #5BE498;">
+            <span  class="fcui-spantitle-left">略略略</span><span class="infospan-unnocloud">LueLueLue</span>
+        </div>
+    </div>
+    <div class="fcui-container">
+        <div class="mdui-col-md-3 mdui-col-sm-6 mdui-col-xs-12 fc-card-bottom-18">
+            <div class="mdui-card">
+            <div class="fcui-card-header">
+                <img class="fcui-card-header-avatar" style="background: #FFB858">
+                <div class="fcui-card-header-title">没有东西</div>
+                <div class="fcui-card-header-subtitle">_(:зゝ∠)_</div>
+                <div class="mdui-card-menu" style="margin-top:2px;">
+                <a class="mdui-btn mdui-btn-icon" href="#" target="_blank"><i class="mdui-icon material-icons">open_in_new</i></a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div id="webhookrebot">
+    <div class="fcui-container" style="margin-top: 20px;">
+        <div class="fcui-spantitle">
+            <span  class="fcui-spantitle-left">略略略</span><span class="infospan-unnocloud">LueLueLue</span>
+        </div>
+    </div>
+    <div class="fcui-container">
+        <div class="mdui-col-md-3 mdui-col-sm-6 mdui-col-xs-12 fc-card-bottom-18">
+            <div class="mdui-card">
+            <div class="fcui-card-header">
+                <img class="fcui-card-header-avatar" style="background: #FFB858">
+                <div class="fcui-card-header-title">没有东西</div>
+                <div class="fcui-card-header-subtitle">_(:зゝ∠)_</div>
+                <div class="mdui-card-menu" style="margin-top:2px;">
+                <a class="mdui-btn mdui-btn-icon" href="#" target="_blank"><i class="mdui-icon material-icons">open_in_new</i></a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <div class="mdui-typo"> 
+      <p class="mdui-text-color-white" style="text-align: center;padding-top: 26px;">Copyright © 2019 <a href="https://unnocloud.com" target="_blank">未见云</a> All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    window.onscroll = function(){ //绑定scroll事件
+      var t = document.documentElement.scrollTop || document.body.scrollTop; //获取滚动距离
+      if( t >= 130 ) { //判断
+        document.getElementById("mainappbar").classList.remove("mdui-shadow-0");
+      } else {
+        document.getElementById("mainappbar").classList.add("mdui-shadow-0");
+      }
+    }
+    const typedTextSpan = document.querySelector(".typed-text");
+    const cursorSpan = document.querySelector(".cursor");
+    
+    const textArray = ["一份外卖钱即可购买的云产品", "针对性对用户提供低价云服务", "灵工艺&未知云旗下云服务供应商"];
+    const typingSpeed = 200;
+    const erasingSpeed = 100;
+    const newTextDelay = 2000;
+    let textArrayIndex = 0;
+    let charIndex = 0;
+    
+    function type() {
+      if (charIndex < textArray[textArrayIndex].length) {
+        if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+        typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, typingSpeed);
+      } 
+      else {
+        cursorSpan.classList.remove("typing");
+        setTimeout(erase, newTextDelay);
+      }
+    }
+    
+    function erase() {
+      if (charIndex > 0) {
+        if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+        typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+        charIndex--;
+        setTimeout(erase, erasingSpeed);
+      } 
+      else {
+        cursorSpan.classList.remove("typing");
+        textArrayIndex++;
+        if(textArrayIndex>=textArray.length) textArrayIndex=0;
+        setTimeout(type, typingSpeed + 1100);
+      }
+    }
+      document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+      setTimeout(type, newTextDelay + 250);
+    });
+  </script>
+<script>var scroll = new SmoothScroll('a[href*="#"]');</script>
+</body>
+</html>

@@ -1,0 +1,586 @@
+/* 
+   FCUI部分
+   Made By:FastChen
+   网址:fastchen.com
+   版本:0.5
+   修改日期:19.06.12
+ */
+/* 快辰-修改文本选中配色 */
+.mdui-card{border-radius: 6px;}
+.fcui-card-header-avatar{float:left;width:60px;height:60px;border-radius: 50%;}
+.fcui-card-header{position: relative;height: 92px;-webkit-box-sizing: border-box;box-sizing: border-box;padding: 16px;}
+.fcui-card-header-title {padding-top: 10px;display: block;margin-left: 72px;overflow: hidden;font-size: 16px;font-weight: 500;line-height: 20px;text-overflow: ellipsis;white-space: nowrap;opacity: .87;}
+.fcui-card-header-subtitle {display: block;margin-left: 72px;overflow: hidden;font-size: 14px;font-weight: 400;line-height: 20px;text-overflow: ellipsis;white-space: nowrap;opacity: .54;}
+.fcui-shadow-down-2{
+    -webkit-box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14);
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14);
+}
+footer {
+    background: #363636;
+    padding: 0 0 10px 0;
+    font-size: 14px;
+}
+::selection {
+    background:#636363; 
+    color:#fff;
+}
+
+::-moz-selection {
+    background:#636363; 
+    color:#fff;
+}
+
+::-webkit-selection {
+    background:#636363; 
+    color:#fff;
+}
+.fcui-textcolor{background-image:linear-gradient(150deg, #E96D71 10%, #FA5C7F 100%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;}
+.fcui-color{background:linear-gradient(270deg,#E96D71,#FA5C7F);}
+.fcui-listtitle{background:linear-gradient(270deg,#E96D71,#FA5C7F);color:#FAFAFA;font-size:24px;font-weight:700;line-height:32px;padding:20px 24px 19px}
+.fcui-iconimg{height: 50px;filter: grayscale(100%);}
+.fcui-iconimg:hover{filter: grayscale(0);cursor:pointer;}
+.fcui-appbar-banner {
+    background-image: -webkit-gradient(linear,right top,left top,from(#E96D71),to(#FA5C7F));
+    background-image: linear-gradient(270deg,#E96D71,#FA5C7F);
+}
+.fcui-panel {
+    background-image: -webkit-gradient(linear,right top,left top,from(#E96D71),to(#FA5C7F));
+    background-image: linear-gradient(270deg,#E96D71,#FA5C7F);
+}
+.fcui-banner {
+    z-index: 100;
+    height: 407px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    color: #fff;
+    background-image: -webkit-gradient(linear,right top,left top,from(#E96D71),to(#FA5C7F));
+    background-image: linear-gradient(270deg,#E96D71,#FA5C7F);
+}
+.fcui-logo {
+    width: 120px;
+    height: 120px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+.fcui-logo>img {
+    width: 80px;
+    height: 80px
+}
+
+.main-container {
+    text-align: center;
+    padding-bottom: 0
+}
+
+.fcui-spantitle {
+    width: 100%;
+    height: 20px;
+    margin-bottom: 15px;
+	padding-left: 8px;
+	border-left: 4px solid #3698DB;
+}
+.fcui-spantitle .fcui-spantitle-left{
+    font-size: 18px;
+    float: left;
+    line-height: 20px;
+    font-weight: 700;
+}
+.fcui-spantitle .fcui-spantitle-right {
+    float: right;
+}
+
+.fcui-container, .fcui-container-fluid {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-right: 8px;
+    padding-left: 8px;
+    margin-right: auto;
+    margin-left: auto
+}
+.fcui-container-fluid:after, .fcui-container:after {
+    display: table;
+    clear: both;
+    content: ''
+}
+.fcui-container {
+    width: 98%;
+    max-width: 1680px
+}
+
+@media (min-width:600px) {
+.fcui-container {
+    width: 94%
+}
+}
+
+@media (min-width:1024px) {
+.fcui-container {
+    width: 92%
+}
+}
+
+.fcui-colorcard {
+    width: 100%;
+    height: 180px;
+    position: relative;
+}
+.fcui-colorgroupcard {
+    width: 100%;
+    position: relative;
+}
+.fcui-colorspan span{
+    position:absolute;
+    text-align:center;
+    display:block;
+    bottom:0;
+    color:#fff;
+    opacity:0;
+    text-transform:uppercase;
+    background-color:rgba(33,33,3,.1);
+    padding:3px 6px;
+    border-radius:0 3px 0 0;
+    cursor:pointer;
+    letter-spacing:1px
+}
+.fcui-colorspan span:hover{
+    background-color:rgba(33,33,33,.4)
+}
+.fcui-colorspan span:active{
+    background-color:rgba(33,33,33,.6)
+}
+
+.fcui-colorspan:hover span{opacity:1}
+
+.fc-card-bottom-18 {
+    padding-bottom: 18px;
+}
+.fc-card-left-18 {
+    padding-left:18px;
+}
+.fc-card-container{
+    padding-left:10px;
+    padding-right:10px;
+}
+.main-btn-wrapper {
+    margin: 40px 0 40px
+}
+
+/* 文档最外层 */
+.style-container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    position: relative;
+}
+@media (min-width: 480px) {
+ .style-container {
+ padding-top: 60px;
+ padding-bottom: 70px;
+}
+}
+@media (min-width: 840px) {
+ .style-container {
+ padding-top: 80px;
+ padding-bottom: 100px;
+}
+}
+/* 页面标题 */
+h1.style-title {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 400;
+    margin: 0 0 20px 0;
+}
+@media (min-width: 480px) {
+ h1.style-title {
+ font-size: 28px;
+ line-height: 36px;
+ margin: 0 0 25px 0;
+}
+}
+@media (min-width: 840px) {
+ h1.style-title {
+ font-size: 34px;
+ line-height: 40px;
+ margin: 0 400px 30px 0;
+}
+}
+/* 组件介绍 */
+.style-intro {
+    font-size: 16px;
+    margin-bottom: 0;
+    padding: 0 0 48px 0;
+}
+@media (min-width: 480px) {
+ .style-intro {
+ padding: 0 0 54px 0;
+}
+}
+@media (min-width: 840px) {
+ .style-intro {
+ padding: 0 0 60px 0;
+ margin-right: 400px;
+}
+}
+.style-no-cover .style-intro {
+    margin-right: 0;
+}
+.style-intro p:last-child {
+    margin-bottom: 0;
+}
+/* 组件介绍中的子模块 */
+.style-intro-module {
+    font-size: 14px;
+    margin-top: 40px;
+}
+.style-intro-module h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+}
+.style-intro-module p {
+    margin-bottom: 1em;
+}
+/* 目录 */
+.style-toc {
+    margin: 0;
+    font-size: 16px;
+    position: relative;
+    border-left: 3px solid;
+}
+.style-toc a {
+    text-decoration: none;
+    color: inherit;
+}
+.style-toc:before {
+    content: 'Contents';
+    font-size: 15px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #757575;
+}
+.style-toc ul, .style-toc:before {
+    padding-left: 16px;
+}
+.style-toc ul {
+    list-style: none;
+    margin: 0;
+}
+.style-toc ul li {
+    margin: 1em 0;
+}
+.style-toc ul li:first-child {
+    margin-top: 0;
+}
+.style-toc ul li:last-child {
+    margin-bottom: 0;
+}
+.style-toc ul li ul {
+    margin: 1em 0;
+    font-size: 0.83em;
+}
+.style-toc > ul {
+    margin-top: 1em;
+}
+@media (min-width: 480px) {
+ .style-toc {
+ font-size: 17px;
+ border-left-width: 4px;
+}
+ .style-toc ul, .style-toc:before {
+ padding-left: 18px;
+}
+}
+@media (min-width: 840px) {
+ .style-toc {
+ font-size: 18px;
+ border-left-width: 5px;
+ margin-right: 400px;
+}
+ .style-toc ul, .style-toc:before {
+ padding-left: 20px;
+}
+}
+.style-no-cover .style-toc {
+    margin-right: 0;
+}
+/* 封面图 */
+.style-cover {
+    display: none;
+}
+@media (min-width: 840px) {
+ .style-cover {
+ display: block;
+ position: absolute;
+ right: 8px;
+ top: 80px;
+}
+ .style-cover img {
+ width: 360px;
+ height: 360px;
+}
+}
+/* 正文章节 */
+.style-chapter {
+    margin: 20px 0 0 0;
+    padding: 0 0 60px 0;
+}
+.style-chapter-title {
+    margin-top: 2em !important;
+    position: relative;
+    padding: 60px 0 0 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+.mdui-theme-layout-dark .style-chapter-title {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+.style-chapter-title .style-anchor {
+    position: absolute;
+    top: -40px;
+}
+.style-chapter-title-first {
+    border-top: none !important;
+    margin-top: 0 !important;
+}
+/* 正文小章节标题 */
+.style-article-title {
+    position: relative;
+    margin: 64px 0 10px 0 !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+}
+.style-article-title .style-anchor {
+    position: absolute;
+    top: -100px;
+}
+/**
+ * ==============================================================
+ * ======================================================= 底部翻页
+ */
+/* 底部翻页 */
+.style-footer-nav {
+    height: 96px;
+}
+.style-footer-nav-left, .style-footer-nav-right {
+    height: 96px;
+}
+.style-footer-nav-left {
+    text-align: left;
+}
+.style-footer-nav-right {
+    text-align: right;
+}
+.style-footer-nav-text {
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+    line-height: 24px;
+    padding-top: 24px;
+    width: 100%;
+}
+.style-footer-nav-text .mdui-icon {
+    padding-top: 23px;
+    width: 24px;
+}
+.style-footer-nav-text .style-footer-nav-direction {
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 1px;
+    opacity: 0.55;
+}
+.style-footer-nav-left .mdui-icon {
+    float: left;
+    margin-right: 10px;
+}
+.style-footer-nav-right .mdui-icon {
+    float: right;
+    margin-left: 10px;
+}
+.style-footer-nav-left .style-footer-nav-chapter {
+    margin-left: 34px;
+}
+.style-footer-nav-right .style-footer-nav-chapter {
+    margin-right: 34px;
+}
+.mdui-theme-layout-dark .style-footer-nav {
+    background-color: #212121 !important;
+}
+.mdui-theme-layout-dark .style-footer-nav-left, .mdui-theme-layout-dark .style-footer-nav-right {
+    background-color: #212121 !important;
+}
+.mdui-theme-layout-dark .style-footer-nav-text {
+    color: #fff;
+}
+/**
+ * ===============================================================
+ * =========================================================== 演示
+ */
+.style-example {
+    position: relative;
+    margin-bottom: 2.6em;
+}
+/* 实例演示 */
+.style-example-demo {
+    padding: 0;
+    -webkit-transition: padding .3s;
+    -moz-transition: padding .3s;
+    -ms-transition: padding .3s;
+    -o-transition: padding .3s;
+    transition: padding .3s;
+}
+.style-example-demo:after {
+    clear: both;
+    display: table;
+    content: ' ';
+}
+/* Example 文字 */
+.style-example-demo-label {
+    display: none;
+    box-sizing: border-box;
+    width: 100%;
+    line-height: 1;
+    padding: 9px 14px;
+    color: rgba(0, 0, 0, 0.38);
+    font-weight: 700;
+    font-size: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 3px 3px 0 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.mdui-theme-layout-dark .style-example-demo-label {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.5);
+}
+/* 实例代码 */
+.style-example-code {
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-top: none;
+    border-radius: 0 0 3px 3px;
+    padding: 14px !important;
+    margin: 0;
+    display: none;
+}
+.mdui-theme-layout-dark .style-example-code {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+.style-example-code code {
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    line-height: 1.7;
+    padding: 0;
+}
+/* 代码中关键类名高亮 */
+.style-example-code-required {
+    padding: 2px;
+    background-color: #E8EAF6;
+}
+.style-example-code-required * {
+    color: #FF4081;
+}
+/* 代码中添加链接 */
+.style-example-code a {
+    text-decoration: none;
+}
+.style-example-tools {
+    position: absolute;
+    right: 0;
+    top: -20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: top .3s;
+    -moz-transition: top .3s;
+    -ms-transition: top .3s;
+    -o-transition: top .3s;
+    transition: top .3s;
+}
+.style-example-tools a {
+    color: rgba(0, 0, 0, 0.54);
+    margin: 0 8px;
+}
+.style-example-tools a:hover {
+    color: rgba(0, 0, 0, 0.87);
+}
+.mdui-theme-layout-dark .style-example-tools a {
+    color: rgba(255, 255, 255, 0.7);
+}
+.mdui-theme-layout-dark .style-example-tools a:hover {
+    color: #ffffff;
+}
+.style-example-showcode .style-example-demo {
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-top: none;
+    padding: 14px;
+}
+.mdui-theme-layout-dark .style-example-showcode .style-example-demo {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+.style-example-showcode .style-example-demo-label {
+    display: block;
+}
+.style-example-showcode .style-example-code {
+    display: block;
+}
+.style-example-showcode .style-example-tools {
+    top: 4px;
+}
+/**
+ * ============================================================
+ * =================================================== 常用工具类
+ */
+/* 小型的圆形 */
+.style-color-circle {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+/* 添加内边距 */
+.style-box-padding {
+    padding: 10px 15px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+}
+/**
+ * =========================================================
+ * ======================================== 根据主题设置可见状态
+ */
+/* 亮色主题可见 */
+.style-visible-light-theme {
+    display: block;
+}
+.mdui-theme-layout-dark .style-visible-light-theme {
+    display: none;
+}
+.style-visible-dark-theme {
+    display: none;
+}
+.mdui-theme-layout-dark .style-visible-dark-theme {
+    display: block;
+}

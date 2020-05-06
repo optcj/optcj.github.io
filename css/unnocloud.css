@@ -1,0 +1,93 @@
+.type-unnocloud {
+	height: 20vh;
+	display: flex;
+	justify-content: center;
+  	align-items: center;
+  	color: #fff;
+  	background-image: -webkit-gradient(linear,right top,left top,from(#E96D71),to(#FA5C7F));
+  	background-image: linear-gradient(270deg,#E96D71,#FA5C7F);
+}
+.type-unnocloud h1 {
+	font-size: 3rem;
+	padding: 0.5rem;
+	font-weight: normal;
+	letter-spacing: 0.1rem;
+	text-align: center;
+	overflow: hidden;
+}
+.type-unnocloud h1 span.typed-text {
+	font-weight: bold;
+}
+.type-unnocloud h1 span.cursor {
+	display: inline-block;
+	background-color: #ccc;
+	margin-left: 0.1rem;
+	width: 3px;
+	animation: blink 1s infinite;
+}
+.type-unnocloud h1 span.cursor.typing {
+	animation: none;
+}
+@keyframes blink {
+	0%  { background-color: #ccc; }
+	49% { background-color: #ccc; }
+	50% { background-color: transparent; }
+	99% { background-color: transparent; }
+	100%  { background-color: #ccc; }
+}
+@media (max-width:850px) {
+	.type-unnocloud {
+		height: 10vh;
+	}
+	.type-unnocloud h1 {
+		font-size: 1.8rem;
+	}
+	.icons-example .icons-example-wrapper {
+		min-width: 100%
+	}
+}
+
+.infospan-unnocloud{
+  	color: #929292;
+	margin-left: 14px;
+	font-size: 18px;
+	float: left;
+	line-height: 20px;
+}
+
+@font-face {font-family: "unnocloudicon";
+  src: url('//at.alicdn.com/t/font_1411298_5pwh783e60x.eot?t=1570100872447'); /* IE9 */
+  src: url('//at.alicdn.com/t/font_1411298_5pwh783e60x.eot?t=1570100872447#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAUgAAsAAAAACdwAAATTAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDSAqGPIVZATYCJAMYCw4ABCAFhHkHXRugCCOSDk6c7J+HsbHy8GA6XQ3OWhx0aa7IFdHy6kcjGem7z/Hw/P3q3P/ezEbpNtAIbBdIZOlSkq1Cg9bx72WTl80ir1BKOUnNbU8udIaTnPVFBMDinFMno6IuR/IWPfpBCpQ+zQ4Hx0yX1oB1AL6OpgEm2EC2jyiNon/ggTy/oP4wdnEZNxOo1aki+gbG5lTLtL0CsbW+Oq86ppZLyKFaVs45MYtHlOrivrgCHtzNx7dvVFMoJdqtplb6l3S9vdmdOv7vSlKXqf0ZwZxGQgWZuMo1n0h+uCKplf5CNoJ61Qr57bXBm8lb+Pvu//8YX7OHev1fHiVJFgqiDIrrMXYsUuINTLYkMYBKCUpMoFKGknBoFE6TA+sUoNzjDk34iQMaruKrq4WQFCc30zShhzHh78TIGF2NEWsdJIkThPwOkc3n957Fk52WEXfu8NzkjR0bJm3q3IzzJx3qPByz0MSoaghxi8nnnVju+h27qnnFLHHMHgefSIyZY2ywQzAwdMc1PM3vSe6QuHm3nOYH8fykSYn7JNt5ixNEll33PHSTZNc5n5n7jBXFMZOkTNRzkiBxksQPv2qyA6yj9wiCeFOMBawo3CFqH42hmamaR6/ZYCxbuNFhslH1/M0E1bmtJJ9iqycZVOA1W0B2t5GpnIvXbzajFm1qlZ5z0hv+zitWzBcE1hBynfJW8Gm77UC3VX1hch+xAF3aRHanpo2K87RrHhcp32SrA6ud0cjNy7vIkxXMCJeRrj9cvjO/Chmli8IlerABeE9bk+rts8aibrRpFlLrDJvh/5pp07rKANPChoQGjTnuN+LNE7SYYeZDo8/Rnw8Q8gquL8T/ssWJcKwfMkJeNNrNPfScyiGyovNMl73sycVDNTUE/wVZtZdtLeg43QGzBZa1WU2Lkr0mmqPxz9d6dCwMmu19JhPC92/HjnZkS6C6cXmRY7H9Yfuk+IRE51uUOBYta6oG05cDA6Y7Ej1tcnTyHuXp5Nh4JuI9e7zt+bg43t57F2w4o2NUEU15L6FeUku8qWjLqjta+tqG2V5e7+LVxpkfdlPR+uWEQ7uRtr7mW4uqWh8BloffEP7deFMlkO439W+pXOX6txVqp3qbFL26UvNxSZ/cul6o0cw5qB21zZyrRq3IdqA21J5aD2MBAOD/s/Q3WbmUjrSO7KIMIS+SI4T3JaRjdGL6msZ9hjvBx1nLveXa4V+V+M+cuHf4+wB2/R8ig/bsb0kCtTkfHafmgEzmaRp5FlubuwIBQI4DJXhWQlofA/jU7Hoe9yVlamcDEFSYEBAFSyCpOCBlWE+gYEEgpxILNDdpFkz/E67KKgBwNRECQc9uQLScBZKe20gZ9hVQDH0HOb3QBBpHWF0Q69nHsjsyDoIzjH+wEyVlpMpOqPgi599QL2Fglu8FXsjFQj90dZuOXTEh93NI+eheRIFiinBpdTsMgSAzOZykNiL50DQq75nqiWK1c2QcBGcw/oGdKCnbKDuTQsXz8jd3Q72EgcvapMIvZIaFlgOdWlsHeRWnei3ndFj56J6IArOaKYLLeEYMephAzhc6lD5JzbQI5oMGj1J1xfW40nitF6CW9oRyFJEiRynKUWV1ivZn02a2SZvFq5mWv01bFxp+drCUu7dfUozNNlUVAA==') format('woff2'),
+  url('//at.alicdn.com/t/font_1411298_5pwh783e60x.woff?t=1570100872447') format('woff'),
+  url('//at.alicdn.com/t/font_1411298_5pwh783e60x.ttf?t=1570100872447') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('//at.alicdn.com/t/font_1411298_5pwh783e60x.svg?t=1570100872447#unnocloudicon') format('svg'); /* iOS 4.1- */
+}
+
+.unnocloudicon {
+  font-family: "unnocloudicon" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.tk-weixin:before {
+  content: "\e63c";
+}
+
+.tk-dingding:before {
+  content: "\e7b3";
+}
+
+.tk-douyin:before {
+  content: "\e614";
+}
+
+.tk-jingxiang:before {
+  content: "\e619";
+}
+
+.tk-qingshipin:before {
+  content: "\e600";
+}
+
